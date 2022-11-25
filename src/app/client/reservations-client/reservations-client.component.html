@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>My Reservations</h2>
+  <div class="list-reservations">
+    <div class="card-reservation" *ngFor="let reservation of reservations">
+      <div class="column-card image-container">
+        <img src="{{reservation.carRentResource.image}}" alt="">
+        <p class="footer-image">{{reservation.carRentResource.model}}</p>
+      </div>
+      <div class="column-card">
+        <h5>Reserve date : {{reservation.reserveDate | date:'dd-MM-YYYY'}}</h5>
+        <h5>Return date : {{reservation.returnDate | date:'dd-MM-YYYY'}}</h5>
+        <h5>Amount : {{reservation.amount.toFixed(2)}}</h5>
+      </div>
+      <div class="column-card client-profile">
+
+      </div>
+      <div class="footer-card">
+        <button nbButton status="info" *ngIf="reservation.status==1" (click)="open(reservation.id.toString())">Pay</button>
+        <button nbButton status="danger" *ngIf="reservation.status==1" (click)="clickCancel(reservation.id)">Cancel</button>
+        <nb-tag status="info" appearance="filled" text="Waiting" *ngIf="reservation.status==0"></nb-tag>
+        <nb-tag status="danger" appearance="filled" text="Declined" *ngIf="reservation.status==2"></nb-tag>
+        <nb-tag status="info" appearance="filled" text="Canceled" *ngIf="reservation.status==3"></nb-tag>
+        <nb-tag status="primary" appearance="filled" text="Rented" *ngIf="reservation.status==4"></nb-tag>
+      </div>
+    </div>
+  </div>
+</div>

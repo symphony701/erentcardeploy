@@ -1,0 +1,70 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+.dialog-container{
+  width:600px;
+  height:550px;
+  background: #e7e7e7;
+  padding:15px 25px 40px 25px;
+  overflow-y:auto;
+}
+.title{
+  font-size:1.8rem;
+  margin-bottom:10px
+}
+.car-container{
+  display:flex;
+}
+.left-column{
+  width:50%;
+}
+.right-column{
+  width:50%;
+}
+.sub{
+  font-size:1.0rem;
+}
+.select-car{
+  margin-bottom:15px;
+}
+.select-type{
+  margin-bottom:15px;
+}
+input{
+  width:205px;
+  margin-bottom:15px;
+}
+textarea{
+  resize: none;
+  height:80px;
+  margin-bottom:20px
+}
+h4{
+  font-size:1.5rem;
+  margin-bottom:10px
+}
+.features{
+  width:100%;
+  display:flex;
+}
+.feature-container{
+  width:50%
+}
+.check-container{
+  display:flex;
+  align-items:center;
+  margin-bottom:15px
+}
+nb-checkbox{
+  margin-right:5px
+}
+.button-container{
+  margin-top: 10px;
+  display:flex;
+  justify-content: flex-end;
+}
+.add-button{
+  margin-right:5px;
+}

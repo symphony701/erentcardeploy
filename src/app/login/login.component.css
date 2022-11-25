@@ -1,0 +1,85 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+.container-login{
+  height:100vh;
+  display: flex;
+}
+.left{
+  width:50vw;
+  background: #005C97;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+h1{
+  font-size:4.8rem;
+  color:white;
+  font-family: 'Pacifico', cursive;
+}
+i{
+  font-size:4.8rem;
+  color:white;
+}
+.right{
+  width:50vw;
+  background: #f8f8f8;
+  height:100%;
+  position:relative;
+  padding-left:0px;
+  display:flex;
+  align-items:center;
+}
+.title{
+  margin:-80px 0px 20px 0px;
+}
+.form{
+  width:320px;
+  margin-left:40px
+}
+.container-field{
+  padding-bottom:15px;
+}
+.container-field h4{
+  font-size:1rem;
+  color: #9a9898;
+  line-height:30px
+}
+input{
+  width:100%
+}
+.terms{
+  margin-top:10px
+}
+button{
+  outline:none;
+  border:0;
+  background: #18284e;
+  padding:10px 20px;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin-top:20px;
+  font-family:Open Sans, sans-serif
+}
+.register{
+  margin-top:20px;
+  font-size: 0.7rem;
+  font-family:Open Sans, sans-serif
+}
+.register-link{
+  color:#18284e;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.alert{
+  color: #f80c0c;
+  font-weight:600;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="profile left">
+    <div class="section-image">
+      <div class="stars">
+        <i class='bx bxs-star'></i>
+        <p>{{this.rating|number:'1.1-1'}}</p>
+      </div>
+      <img src="{{this.image}}" alt="">
+    </div>
+    <div class="section-info">
+      <p class="info-user">Names: <span>{{this.names}}</span></p>
+      <p class="info-user">Last Names: <span>{{this.lastNames}}</span> </p>
+      <p class="info-user">Contact number: <span>{{this.contactNumber}}</span> </p>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="profile right">
+    <h2>Favorites</h2>
+    <div class="list-cars">
+      <div class="card-car" *ngFor="let carResource of cars">
+
+        <div class="brand-container">
+          <img src="{{returnBrand(carResource.car.brand.name)}}" alt="">
+        </div>
+        <img src="{{carResource.car.image}}" alt="">
+        <div class="card-car-footer">
+          <p>{{carResource.car.model}}</p>
+        </div>
+      </div>
+      <p *ngIf="cars.length<1">No favorites</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,205 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+h2{
+  margin-bottom:5px;
+}
+.container{
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+}
+.car-container{
+  display:flex;
+  width:100%;
+  height:100%;
+}
+.column{
+  width:50%;
+  height:100%;
+}
+.car-information{
+  display:flex;
+  width:100%;
+  height:45%;
+}
+.car-information-column{
+  width:50%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.car{
+  position:relative;
+}
+.image-container{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.car-information-column .image-car{
+  width:100%;
+  height:100%;
+}
+.car-information-column .brand-car{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.info{
+  padding:8px;
+}
+.info p{
+  margin-bottom:5px;
+}
+/*.feature{
+  width:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.feature p{
+  font-size:0.6rem;
+}
+.features-container{
+  width:100%;
+  height:15%;
+  padding:2px;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+}*/
+.owner-container{
+  width:100%;
+  margin-top:5px;
+}
+.title-owner{
+  font-weight:550;
+  color:black;
+  font-size:1.0rem;
+}
+.owner{
+  display:flex;
+  justify-content:center;
+}
+.owner-image{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-right:10px;
+}
+.owner-image img{
+  width:100%;
+  height:100%;
+}
+.owner-info{
+  font-size:0.9rem;
+}
+.owner-info .bxs-star{
+  color: #e5bf02;
+}
+.owner-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.toProfile{
+  cursor:pointer;
+}
+
+.card-icon-container{
+  width:40px;
+  height:40px;
+  border-radius:5px;
+  background: rgba(120, 146, 170, 0.2);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:1.5rem;
+}
+.card-icon-container i{
+  color: #305b8b;
+}
+.rating{
+  width:100%;
+  height:100%;
+}
+.stars i{
+  color: #e5bf02;
+}
+.comments{
+  margin-top:5px;
+  padding:5px 0px;
+  max-height:350px;
+  width:100%;
+  overflow-y:auto;
+  display:flex;
+  flex-wrap:wrap;
+  row-gap:8px;
+}
+.input-date{
+  padding:4px 6px;
+  font-size:1.2rem;
+}
+.reservation{
+  display:flex;
+  flex-direction:column;
+}
+.separator{
+  width:2px;
+  height:100%;
+  background: #9a9898;
+  margin:0px 2px 0 2px;
+}
+button{
+  margin-top:8px;
+}
+.brand-container{
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:white;
+  overflow:hidden;
+  z-index:1
+}
+.brand-container img{
+  width:100%;
+  height:100%;
+}
+.rating-container{
+  width:70%;
+  margin:auto;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding:8px 0px;
+  background: #f8f8f8;
+}
+.rating-user{
+  width:60px;
+  display:inline-block;
+  line-height:26px;
+  text-align:center;
+  background:#305b8b;
+  color:white;
+}
+.rating-user i{
+  font-size:0.9rem;
+  margin-right:2px;
+}
+.rating-comment{
+  min-height:60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+}

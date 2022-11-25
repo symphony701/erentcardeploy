@@ -1,0 +1,112 @@
+<!--<p>login works!</p>
+<div class="nb-theme-corporate aber">
+  <input type="text" nbInput placeholder="Text field">
+</div>-->
+<!--<div class="container-login">
+  <div class="left">
+
+  </div>
+  <div class="right">
+    <div class="nb-theme-corporate form">
+      <h2 class="title">Login</h2>
+      <div class="container-field">
+        <h4>Email:</h4>
+        <input type="email" nbInput status="primary" placeholder="Email">
+      </div>
+      <div class="container-field">
+        <h4>Password:</h4>
+        <input type="password" nbInput status="primary" placeholder="Password">
+      </div>
+      <div class="container-field">
+        <h4>Type User:</h4>
+        <div class="nb-theme-corporate"></div>
+        <nb-select multiple placeholder="Multiple Select">
+          <nb-option value="1">Option 1</nb-option>
+          <nb-option value="2">Option 2</nb-option>
+          <nb-option value="3">Option 3</nb-option>
+          <nb-option value="4">Option 4</nb-option>
+        </nb-select>
+      </div>-->
+<!--<div class="terms">
+  <nb-checkbox status="success"><span>Accept the terms and conditions</span></nb-checkbox>
+</div>-->
+<!--<button>Active</button>
+</div>
+</div>
+</div>-->
+<nb-layout>
+  <nb-layout-column class="left">
+    <i class='bx bxs-car'></i><h1 class="logo">ERentCar</h1>
+  </nb-layout-column>
+  <nb-layout-column class="right">
+    <div class="nb-theme-corporate form">
+      <h2 class="title">Register</h2>
+      <div class="form-content">
+        <div class="form-column">
+          <div class="container-field">
+            <h4>Name:</h4>
+            <input class="input-password" type="text" nbInput status="primary" placeholder="Name" [(ngModel)]="names">
+          </div>
+          <div class="container-field">
+            <h4>Last Name:</h4>
+            <input class="input-password" type="text" nbInput status="primary" placeholder="Last Name" [(ngModel)]="lastNames">
+          </div>
+          <div class="container-field">
+            <h4>Image:</h4>
+            <input class="input-password" type="text" nbInput status="primary" placeholder="Image Url" [(ngModel)]="image">
+          </div>
+          <div class="container-field">
+            <h4>Type User:</h4>
+            <div class="nb-theme-corporate"></div>
+            <nb-select placeholder="Type user" status="primary" [(selected)]="typeUser">
+              <nb-option value="1">Owner</nb-option>
+              <nb-option value="2">Client</nb-option>
+            </nb-select>
+          </div>
+        </div>
+        <div class="form-column">
+          <div class="container-field">
+            <h4>Email:</h4>
+            <input class="input-password" type="email" nbInput status="primary" placeholder="Email" [(ngModel)]="email">
+          </div>
+          <div class="container-field">
+            <h4>Password:</h4>
+            <input class="input-password" type="password" nbInput status="primary" placeholder="Password" [(ngModel)]="password">
+          </div>
+          <div class="container-field">
+            <h4>Number Contact:</h4>
+            <input class="input-password" type="text" nbInput status="primary" placeholder="Number Contact" [(ngModel)]="contactNumber"
+                   onkeypress="return ((event.charCode >= 48 && event.charCode <= 57))">
+          </div>
+        </div>
+      </div>
+      <!--<div class="container-field">
+        <h4>Name:</h4>
+        <input class="input-password" type="password" nbInput status="primary" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="container-field">
+        <h4>Last Names:</h4>
+        <input class="input-password" type="password" nbInput status="primary" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="container-field">
+        <h4>Email:</h4>
+        <input class="input-email" type="email" nbInput status="primary" placeholder="Email" [(ngModel)]="email">
+      </div>
+      <div class="container-field">
+        <h4>Password:</h4>
+        <input class="input-password" type="password" nbInput status="primary" placeholder="Password" [(ngModel)]="password">
+      </div>
+
+      <div class="container-field">
+        <h4>Type User:</h4>
+        <div class="nb-theme-corporate"></div>
+        <nb-select placeholder="type user" status="primary" [(selected)]="typeUser">
+          <nb-option value="1">Owner</nb-option>
+          <nb-option value="2">Client</nb-option>
+        </nb-select>
+      </div>-->
+      <button (click)="register()">Register</button>
+      <p class="register">Do you already have an account? <span class="register-link" (click)="toLogin()">Login here</span></p>
+    </div>
+  </nb-layout-column>
+</nb-layout>

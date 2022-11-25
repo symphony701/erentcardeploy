@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="profile left">
+    <div class="section-image">
+      <div class="stars">
+        <i class='bx bxs-star'></i>
+        <p>{{this.rating|number:'1.1-1'}}</p>
+      </div>
+      <img src="{{this.image}}" alt="">
+    </div>
+    <div class="section-info">
+      <p class="info-user">Names: <span>{{this.names}}</span></p>
+      <p class="info-user">Last Names: <span>{{this.lastNames}}</span> </p>
+      <p class="info-user">Contact number: <span>{{this.contactNumber}}</span> </p>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="profile right">
+    <div class="rating">
+      <h6>Comments:</h6>
+      <div class="comments">
+        <div class="rating-container" *ngFor="let rating of ratings">
+          <div class="rating-user">
+            <i class='bx bxs-star'></i>
+            <span>{{rating.stars}}</span>
+          </div>
+          <div class="rating-comment">
+            <p>{{rating.comment}}</p>
+          </div>
+        </div>
+        <p *ngIf="ratings.length<1">No comments</p>
+      </div>
+    </div>
+    <!--<div class="list-cars">
+      <div class="card-car" *ngFor="let car of cars">
+        <div class="icons-crud">
+          <div class="container-icon">
+            <i class='bx bxs-edit-alt'></i>
+          </div>
+          <div class="container-icon">
+            <i class='bx bxs-trash-alt'></i>
+          </div>
+        </div>
+        <div class="brand-container">
+          <img src="{{returnBrand(car.brand.name)}}" alt="">
+        </div>
+        <img src="{{car.image}}" alt="">
+        <div class="card-car-footer">
+          <p>{{car.model}}</p>
+          <button nbButton status="success">Ver más</button>
+        </div>
+      </div>
+    </div>-->
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<nb-layout>
+  <nb-layout-column class="left">
+    <i class='bx bxs-car'></i><h1 class="logo">ERentCar</h1>
+  </nb-layout-column>
+  <nb-layout-column class="right">
+    <div class="nb-theme-corporate form">
+      <h2 class="title">Hello again!</h2>
+      <div class="container-field">
+        <h4>Email:</h4>
+        <input class="input-email" type="email" nbInput status="primary" placeholder="Email" [(ngModel)]="email">
+      </div>
+      <div class="container-field">
+        <h4>Password:</h4>
+        <input class="input-password" type="password" nbInput status="primary" placeholder="Password" [(ngModel)]="password">
+      </div>
+      <div class="container-field">
+        <h4>Type User:</h4>
+        <div class="nb-theme-corporate"></div>
+        <nb-select placeholder="Type user" status="primary" [(selected)]="typeUser">
+          <nb-option value="1">Owner</nb-option>
+          <nb-option value="2">Client</nb-option>
+        </nb-select>
+      </div>
+      <button (click)="login()">Login</button>
+      <p *ngIf="this.error==true" class="alert">Email or password incorrect</p>
+      <p class="register">You do not have an account? <span class="register-link" (click)="toRegister()">Sign up here</span></p>
+    </div>
+  </nb-layout-column>
+</nb-layout>

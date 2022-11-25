@@ -1,0 +1,89 @@
+<div class="dialog-container">
+  <!--    <p>Agregar un auto</p>
+  <button nbButton status="danger" (click)="close()">Danger</button>
+  <nb-select placeholder="NgModel" status="primary">
+    <nb-option value="1">Option 1</nb-option>
+    <nb-option value="2">Option 2</nb-option>
+    <nb-option value="3">Option 3</nb-option>
+    <nb-option value="4">Option 4</nb-option>
+  </nb-select>-->
+  <h2 class="title">Add a new car</h2>
+  <div class="car-container">
+    <div class="left-column">
+      <h5 class="sub">Brand</h5>
+      <nb-select class="select-car" id="brand" placeholder="brands" status="primary" [(ngModel)]="brandId">
+        <nb-option *ngFor="let brand of brands" value="{{brand.id}}">{{brand.name}}</nb-option>
+      </nb-select>
+      <h5 class="sub">Model</h5>
+      <input type="text" nbInput id="model" status="primary" placeholder="Model" [(ngModel)]="model">
+      <h5 class="sub">Mileage</h5>
+      <input type="number" nbInput id="mileage" status="primary" placeholder="Mileage" [(ngModel)]="mileage">
+      <h5 class="sub">Image</h5>
+      <input type="text" nbInput id="image" status="primary" placeholder="Image" [(ngModel)]="image">
+    </div>
+    <div class="right-column">
+      <h5 class="sub">Type</h5>
+      <nb-select class="select-type"  placeholder="type" status="primary" [(ngModel)]="type">
+        <nb-option value="Hatchback">Hatchback</nb-option>
+        <nb-option value="Sedan">Sedan</nb-option>
+        <nb-option id="suv" value="SUV">SUV</nb-option>
+        <nb-option value="VAN">VAN</nb-option>
+        <nb-option value="Pick Up">Pick Up</nb-option>
+      </nb-select>
+      <h5 class="sub">Plate Number</h5>
+      <input type="text" nbInput id="plateNumber" status="primary" placeholder="Plate Number" [(ngModel)]="plateNumber">
+      <h5 class="sub">Day Cost</h5>
+      <input type="number" nbInput id="dayCost" status="primary" placeholder="Day Cost" [(ngModel)]="dayCost">
+    </div>
+  </div>
+  <div class="description">
+    <h5 class="sub">Description</h5>
+    <textarea nbInput id="description" fullWidth placeholder="Description max(250)" [(ngModel)]="description"></textarea>
+  </div>
+  <!--<h4 >Features</h4>
+  <div class="features">
+    <div class="feature-container">
+      <h5 class="sub">Number of seats</h5>
+      <div class="check-container">
+        <nb-checkbox id="seat" [(ngModel)]="seats"></nb-checkbox>
+        <nb-select [(ngModel)]="numberSeat" id="select-seat" class="select-feature" placeholder="#seats" [size]="'small'" status="primary">
+          <nb-option value="2">2</nb-option>
+          <nb-option value="4">4</nb-option>
+          <nb-option id="5-seat" value="5">5</nb-option>
+          <nb-option value="8">8</nb-option>
+        </nb-select>
+      </div>
+
+      <div class="check-container">
+        <nb-checkbox id="ac" [(ngModel)]="ac"></nb-checkbox>
+        <h5 class="sub">Air conditioning</h5>
+      </div>
+    </div>
+    <div class="feature-container">
+      <h5 class="sub">Fuel type</h5>
+      <div class="check-container">
+        <nb-checkbox id="fuel" [(ngModel)]="fuel"></nb-checkbox>
+        <nb-select  [(ngModel)]="fuelString" class="select-feature select-fuel" placeholder="fuel" [size]="'small'" status="primary">
+          <nb-option value="Gasoline">Gasoline</nb-option>
+          <nb-option id="glp" value="GLP">GLP</nb-option>
+          <nb-option value="GNP">GNP</nb-option>
+          <nb-option value="Diesel">Diesel</nb-option>
+          <nb-option value="Electricity">Electricity</nb-option>
+        </nb-select>
+      </div>
+
+      <h5 class="sub">Gearbox</h5>
+      <div class="check-container">
+        <nb-checkbox id="gear" [(ngModel)]="gear"></nb-checkbox>
+        <nb-select [(ngModel)]="gearBox" class="select-feature select-gear" placeholder="gearbox" [size]="'small'" status="primary">
+          <nb-option id="auto" value="Automatic">Automatic</nb-option>
+          <nb-option value="Mechanic">Mechanic</nb-option>
+        </nb-select>
+      </div>
+    </div>
+  </div>-->
+  <div class="button-container">
+    <button class="add-button" nbButton status="success" (click)="postCar()">Add car</button>
+    <button nbButton status="danger" (click)="close()">Cancel</button>
+  </div>
+</div>

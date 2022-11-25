@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+:host{
+  width:90%;
+}
+.rating{
+  margin:auto;
+  padding:2px;
+}
+.rating-container{
+  display:flex;
+  column-gap:8px;
+}
+.column-rating{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding:5px;
+  width:50%;
+}
+.stars-container i{
+  font-size:1.2rem;
+  color:#d9a30d;
+  cursor:pointer;
+}
+.title-comment{
+  text-align:left;
+}
+textarea{
+  resize:none;
+}
+.rating button{
+  margin-top:5px;
+}

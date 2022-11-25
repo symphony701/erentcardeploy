@@ -1,0 +1,29 @@
+<!--<div class="rating">
+  <div class="rating-container">
+    <div class="column-rating">
+      <p>For Client:</p>
+      <div class="stars-container">
+        <i class='bx' *ngFor="let star of [1,2,3,4,5];index as i" [ngClass]="returnStarsClient(i)"
+           (click)="selectStarsClient(i)"></i>
+      </div>
+      <p class="title-comment">Comment:</p>
+      <textarea nbInput fullWidth placeholder="Comment here" [(ngModel)]="commentClient"></textarea>
+    </div>
+  </div>
+  <button nbButton status="success" >Send</button>
+</div>-->
+
+<div class="rating">
+  <p>For Client:</p>
+  <div class="stars-container">
+    <i class='bx' *ngFor="let star of [1,2,3,4,5];index as i" [ngClass]="returnStarsClient(i)"
+       (click)="selectStarsClient(i)"></i>
+  </div>
+  <p class="title-comment">Comment:</p>
+  <textarea nbInput fullWidth placeholder="Comment here" [(ngModel)]="commentClient"></textarea>
+  <div class="buttons">
+    <button nbButton status="success" (click)="send()">Send</button>
+    <button nbButton status="danger" (click)="close()">Close</button>
+  </div>
+</div>
+

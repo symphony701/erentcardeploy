@@ -1,0 +1,103 @@
+*{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+}
+.container{
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.filters{
+  margin:10px 0px;
+  display:flex;
+  column-gap:20px;
+}
+h5{
+  display:flex;
+  align-items:center;
+  font-size:1.2rem;
+}
+.list-cars{
+  overflow-y:auto;
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  height:100%;
+  column-gap:15px;
+  row-gap:10px;
+
+}
+
+
+/*.card{
+  width:250px;
+  height:295px;
+  box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+}
+.image-container{
+  width:100%;
+  height:60%;
+  position:relative;
+}
+.image-container img{
+  width:100%;
+  height:100%;
+}
+.brand-container{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  position:absolute;
+  top:5px;
+}
+.brand-container img{
+  width:100%;
+  height:100%;
+  border-radius: 50%;
+}
+.feature{
+  width:60px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.feature p{
+  font-size:0.7rem;
+  text-align:center;
+}
+.features-container{
+  width:100%;
+  height:25%;
+  background: #fcf7f7;
+  padding:5px;
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+}
+.card-icon-container{
+  width:40px;
+  height:40px;
+  border-radius:5px;
+  background: rgba(120, 146, 170, 0.2);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:1.5rem;
+}
+.card-icon-container i{
+  color: #305b8b;
+}
+.button-container{
+  width:100%;
+  height:15%;
+}
+.button-container button{
+  width:100%;
+  height:100%;
+}*/

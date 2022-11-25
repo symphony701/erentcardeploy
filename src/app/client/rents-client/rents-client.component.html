@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>My Rents</h2>
+  <div class="list-reservations">
+    <div class="card-reservation" *ngFor="let rent of rents">
+      <div class="column-card image-container">
+        <img src="{{rent.reservation.carRentResource.image}}" alt="car image">
+        <p class="footer-image">{{rent.reservation.carRentResource.model}}</p>
+      </div>
+      <div class="column-card">
+        <h5>Reserve date : {{rent.reservation.reserveDate| date:'dd-MM-YYYY'}}</h5>
+        <h5>Return date : {{rent.reservation.returnDate| date:'dd-MM-YYYY'}}</h5>
+        <h5>Amount : {{rent.reservation.amount.toFixed(2)}}</h5>
+      </div>
+      <div class="column-card client-profile">
+
+      </div>
+      <div class="footer-card">
+        <!--<button nbButton status="success" *ngIf="reservation.status==0">Accept</button>
+        <button nbButton status="danger" *ngIf="reservation.status==0">Decline</button>
+        <nb-tag status="success" appearance="filled" text="Accepted" *ngIf="reservation.status==1"></nb-tag>
+        <nb-tag status="danger" appearance="filled" text="Declined" *ngIf="reservation.status==2"></nb-tag>
+        <nb-tag status="primary" appearance="filled" text="Client canceled the reservation" *ngIf="reservation.status==3"></nb-tag>-->
+        <nb-tag *ngIf="rent.status==1||rent.status==2" status="info" appearance="filled" text="finalized rent"></nb-tag>
+        <nb-tag *ngIf="rent.status==0" status="info" appearance="filled" text="In rent"></nb-tag>
+        <!--<button nbButton status="danger" *ngIf="rent.status==0">Finalize Rent</button>-->
+        <!--<nb-tag status="warning" appearance="filled" text="rent in progress"></nb-tag>-->
+      </div>
+      <app-rating-car-owner *ngIf="rent.status==1" [rent]="rent" (setStatus)="this.setRentStatus(rent,$event)"></app-rating-car-owner>
+    </div>
+  </div>
+</div>
+
+

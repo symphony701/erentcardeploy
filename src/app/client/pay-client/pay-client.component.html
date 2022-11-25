@@ -1,0 +1,14 @@
+<div class="dialog-container">
+  <h3>Form</h3>
+  <h6>Card Number</h6>
+  <input type="text" nbInput fullWidth shape="rectangle" placeholder="Card Number">
+  <h6>Expiration Date</h6>
+  <input type="text" nbInput fullWidth shape="rectangle" placeholder="MM/YY">
+  <h6>Security Key</h6>
+  <input type="text" nbInput fullWidth shape="rectangle" placeholder="Security Key">
+  <div class="buttons">
+    <button nbButton status="primary" (click)="clickPay()">Pay</button>
+    <button nbButton status="danger" (click)="close()">Cancel</button>
+  </div>
+
+</div>

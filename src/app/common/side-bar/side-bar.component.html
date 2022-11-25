@@ -1,0 +1,18 @@
+<div class="menu">
+  <div class="menu-options">
+    <h2 class="title"><i class='bx bxs-car' style="color:#f8b806"></i>ERentCar</h2>
+    <ul class="option-list">
+      <li *ngFor="let op of options" class="options">
+        <a routerLink="{{op.router}}"  routerLinkActive="active">
+          <i class='bx {{op.icon}}'></i>
+          {{op.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="menu-out">
+    <ul class="option-list">
+      <li class="options"><a (click)="logOut()" routerLink="/Login" class="out"><i class='bx bx-log-out-circle'></i>Log out</a></li>
+    </ul>
+  </div>
+</div>

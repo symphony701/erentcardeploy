@@ -1,0 +1,23 @@
+<div class="rating">
+  <div class="rating-container">
+    <div class="column-rating">
+      <p>For Car:</p>
+      <div class="stars-container">
+        <i class='bx' *ngFor="let star of [1,2,3,4,5];index as i" [ngClass]="returnStarsCar(i)"
+           (click)="selectStarsCar(i)"></i>
+      </div>
+      <p class="title-comment">Comment:</p>
+      <textarea nbInput fullWidth placeholder="Comment here" [(ngModel)]="commentCar"></textarea>
+    </div>
+    <div class="column-rating">
+      <p>For Owner:</p>
+      <div class="stars-container">
+        <i class='bx' *ngFor="let star of [1,2,3,4,5];index as i" [ngClass]="returnStarsOwner(i)"
+        (click)="selectStarsOwner(i)"></i>
+      </div>
+      <p class="title-comment">Comment:</p>
+      <textarea nbInput fullWidth placeholder="Comment here" [(ngModel)]="commentOwner"></textarea>
+    </div>
+  </div>
+  <button nbButton status="success" (click)="this.clickSend()">Send</button>
+</div>

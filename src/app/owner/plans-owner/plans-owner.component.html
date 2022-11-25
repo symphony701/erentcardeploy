@@ -1,0 +1,50 @@
+<div class="container">
+  <h2>Plans</h2>
+  <div class="plan-container">
+    <div class="card-plan">
+      <div class="card-plan-top">
+        <h5>Plan Free</h5>
+      </div>
+      <div class="card-plan-content">
+        <h4>0.00 $</h4>
+        <p>
+          Default plan that allows you to have only 2 vehicles
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div class="card-plan-footer">
+        <button *ngIf="this.plan!='Free'" nbButton outline status="primary" (click)="updatePlan(1)">Choose Plan</button>
+      </div>
+    </div>
+    <div class="card-plan">
+      <div class="card-plan-top">
+        <h5>Plan Medium</h5>
+      </div>
+      <div class="card-plan-content">
+        <h4>20.00 $</h4>
+        <p>
+          Plan that allows you to own up to 6 vehicles
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div class="card-plan-footer">
+        <button *ngIf="this.plan!='Medium'" nbButton outline status="primary" (click)="updatePlan(2)">Choose Plan</button>
+      </div>
+    </div>
+    <div class="card-plan">
+      <div class="card-plan-top">
+        <h5>Plan Pro</h5>
+      </div>
+      <div class="card-plan-content">
+        <h4>40.00 $</h4>
+        <p>
+          Plan that allows you to own up to 8 vehicles
+        </p>
+        <div class="divider"></div>
+      </div>
+      <div class="card-plan-footer">
+        <button *ngIf="this.plan!='Pro'" nbButton outline status="primary" (click)="updatePlan(3)">Choose Plan</button>
+      </div>
+    </div>
+  </div>
+</div>

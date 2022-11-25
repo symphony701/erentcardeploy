@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Home</h2>
+  <div class="filters">
+    <nb-form-field>
+      <nb-icon nbPrefix status="warning" icon="search-outline" pack="eva"></nb-icon>
+      <input type="text" nbInput placeholder="Keys words" [(ngModel)]="searchBox">
+    </nb-form-field>
+    <!--<h5 (click)="changeFilter()"><i [ngClass]="top?'bx bx-up-arrow-alt':'bx bx-down-arrow-alt'"></i>Price per day</h5>-->
+  </div>
+  <div class="list-cars">
+    <app-car-card *ngFor="let carItem of cars|modelFilter:searchBox;index as i" [car]="carItem">
+
+    </app-car-card>
+    <!--<div class="card" *ngFor="let car of cars">
+      <div class="image-container">
+        <div class="brand-container">
+          <img src="{{car.brand.image}}" alt="brand image">
+        </div>
+        <img src="{{car.image}}" alt="car image">
+      </div>
+      <div class="features-container">
+        <div class="feature" *ngFor="let feature of car.features">
+          <div class="card-icon-container">
+            <i [ngClass]="feature.type==1?'bx bx-user-circle': feature.type==2?'bx bx-sitemap': feature.type==3?'bx bx-wind':'bx bxs-gas-pump'"></i>
+          </div>
+          <p>{{feature.description}}</p>
+        </div>
+      </div>
+      <div class="button-container">
+        <button nbButton outline status="primary" (click)="toCar(car.id)">See more</button>
+      </div>
+    </div>-->
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="container">
+  <h2>Car</h2>
+  <div class="car-container">
+    <div class="column">
+      <div class="car-information">
+        <div class="car-information-column car">
+          <div class="image-container">
+            <img class="image-car" src="{{this.image}}" alt="car-image">
+            <div class="brand-container">
+              <img src="{{this.returnBrand(this.brand.name)}}" alt="brand-logo">
+            </div>
+          </div>
+
+        </div>
+        <div class="car-information-column info">
+          <p>Model:{{model}}</p>
+          <p>PlateNumber:{{plateNumber}}</p>
+          <p>Mileage:{{mileage}}</p>
+          <p>Type:{{type}}</p>
+          <p>DayCost:{{dayCost}}</p>
+          <p>Description:{{description}}</p>
+        </div>
+      </div>
+      <!--<div class="features-container">
+        <div class="feature" *ngFor="let feature of features">
+          <div class="card-icon-container">
+            <i [ngClass]="feature.type==1?'bx bx-user-circle': feature.type==2?'bx bx-sitemap': feature.type==3?'bx bx-wind':'bx bxs-gas-pump'"></i>
+          </div>
+          <p>{{feature.description}}</p>
+        </div>
+      </div>-->
+      <div class="owner-container">
+        <h6 >Owner</h6>
+        <div class="owner">
+          <div class="owner-image">
+            <img src="{{owner.image}}" alt="owner-image">
+          </div>
+          <div class="owner-info">
+            <div>
+              <i class='bx bxs-star'></i>
+              <span>{{owner.rating|number:'1.1-1' }}</span>
+            </div>
+            <p>{{owner.names+" "+owner.lastNames}}</p>
+            <div class="owner-link" (click)="visitOwner(owner.id)">
+              <p class="toProfile">Ver más</p>
+              <i class='bx bx-right-arrow-alt'></i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="reservation">
+        <h5>Reserve</h5>
+        <p>Start date</p>
+        <input class="input-date start-date" type="date" min="{{this.dateStartCreate}}"[(ngModel)]="dateStart"  (change)="change($event)" >
+        <p>Finish date</p>
+        <input class="input-date finish-date" type="date" min="{{this.dateStart}}" (change)="changeF($event)" [(ngModel)]="dateFinish">
+        <button *ngIf="state==0" nbButton status="info" [disabled]="buttonDisabled()"  (click)="clickReserve()">Reserve</button>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="column">
+      <div class="rating">
+        <h5>Rating: <span class="stars"><i class='bx bxs-star'></i> </span>{{this.rating.toFixed(1)}}</h5>
+        <h6>Comments:</h6>
+        <div class="comments">
+          <div class="rating-container" *ngFor="let rating of ratings">
+            <div class="rating-user">
+              <i class='bx bxs-star'></i>
+              <span>{{rating.stars}}</span>
+            </div>
+            <div class="rating-comment">
+              <p>{{rating.comment}}</p>
+            </div>
+          </div>
+          <p *ngIf="this.ratings.length<1">No comments</p>
+        </div>
+      </div>
+      <!--<input nbInput placeholder="Pick Date" [nbDatepicker]="pickerStart" [(ngModel)]="dateStart">
+      <nb-datepicker #pickerStart [min]="minStart" (dateChange)="changeStart($event)"></nb-datepicker>
+      <input nbInput placeholder="Pick Date" [nbDatepicker]="pickerFinish" [(ngModel)]="dateFinish">
+      <nb-datepicker #pickerFinish [min]="minFinish" (dateChange)="changeFinish($event)"></nb-datepicker>
+
+      <input nbInput placeholder="Pick Date Range" [nbDatepicker]="formpicker">
+      <nb-rangepicker #formpicker (rangeChange)="change($event)" [min]="minStart"></nb-rangepicker>-->
+
+    </div>
+  </div>
+</div>
